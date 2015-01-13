@@ -9,3 +9,7 @@
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+export SVN_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+
